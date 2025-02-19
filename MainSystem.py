@@ -6,14 +6,13 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox, QTableWidget
 from SSISFINAL import Ui_MainWindow 
 
 
-# Directory for CSV Files
-CSV_FILES = "E:\\COLLEGE DOCUMENTS\\SSIS\\CSV FILES"
-os.makedirs(CSV_FILES, exist_ok=True)
+# Check if CSV files exist
+file_exists = os.path.exists("students.csv") and os.path.exists("colleges.csv") and os.path.exists("programs.csv")
 
 #CSV Files
-CSV = os.path.join(CSV_FILES, "students.csv")
-COLLEGE_CSV = os.path.join(CSV_FILES, "colleges.csv")
-PROGRAM_CSV = os.path.join(CSV_FILES, "programs.csv")
+CSV = "students.csv"
+COLLEGE_CSV = "colleges.csv"
+PROGRAM_CSV = "programs.csv"
 
 
 class StudentSystem(QMainWindow):
